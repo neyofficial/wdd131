@@ -1,25 +1,29 @@
 
+
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: #f4f4f4;
     color: #333;
+    padding: 20px;
 }
 
 header {
-    background-color: #34495e;
+    background-color: #266aad;
     color: white;
-    padding: 1rem;
+    padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    margin-bottom: 10px;
     font-size: 1.8rem;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0;
@@ -32,13 +36,20 @@ nav ul li a {
     text-decoration: none;
     color: white;
     padding: 0.5rem 1rem;
-    background-color: #2C3E50;
+    background-color: #3676b6;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #1A252F;
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Main Content */
@@ -60,16 +71,16 @@ main {
 
 /* About Me Section */
 .about-me h2 {
-    background-color: #2C3E50;
+    background-color: #367bc0;
     color: white;
     padding: 0.5rem;
-    text-align: center;
+    text-align:justify;
 }
 
 .about-me .profile-pic {
     float: right;
     border-radius: 8px;
-    margin-left: 1rem;
+    margin-left: 2rem;
     width: 150px;
 }
 
@@ -81,7 +92,7 @@ main {
 
 /* Resources Section */
 .resources h2 {
-    background-color: #2C3E50;
+    background-color: #2c6eaf;
     color: white;
     padding: 0.5rem;
     text-align: center;
@@ -101,6 +112,8 @@ main {
     text-decoration: none;
     color: #3498db;
 }
+
+
 
 /* Footer */
 footer {
