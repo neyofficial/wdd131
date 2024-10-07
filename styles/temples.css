@@ -1,0 +1,64 @@
+body {
+    font-family: 'YourChosenFont', sans-serif; /* Use Google Fonts */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa; /* Example color */
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack vertically in mobile */
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff; /* Example color */
+}
+
+.temple-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    gap: 1rem;
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the main content */
+}
+
+figure {
+    margin: 0;
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 2rem; /* Larger size */
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block; /* Show in mobile view */
+    }
+    nav.open ul {
+        display: block; /* Show menu items */
+    }
+    nav ul {
+        display: none; /* Hide menu items by default */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1; /* Example color */
+}

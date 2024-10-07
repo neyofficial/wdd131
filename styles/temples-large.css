@@ -1,0 +1,13 @@
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row; /* Horizontal layout for larger screens */
+    }
+
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger view */
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+}
