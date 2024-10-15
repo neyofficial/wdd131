@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #b92526; /* MGhana's flag color */
+    --primary-color: #b92526; /* Ghana's flag color */
     --secondary-color: #1c6b1c;
     --background-color: #f3f3f3;
     --text-color: #333;
@@ -59,11 +59,40 @@
     list-style: none;
     padding: 0;
   }
-  
-  .weather-icon::after {
-    content: "⛅"; /* Pseudo-element for the weather icon */
-    margin-left: 5px;
-  }
+
+
+/* General Weather Section Styling */
+.weather-section {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    background-color: rgba(0, 107, 60, 0.8); /* Green, semi-transparent */
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Weather title with emoticon (for wider view) */
+.weather-section h2::after {
+    content: "⛅"; /* Emoticon for wider view */
+    font-size: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Media query for mobile view (max width 768px) */
+@media (max-width: 768px) {
+    /* Replace emoticon with SVG image in mobile view */
+    .weather-section h2::after {
+        content: url('images/weather-icon.svg'); /* Use SVG icon in mobile view */
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
   
   footer {
     text-align: center;
