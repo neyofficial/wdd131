@@ -1,128 +1,127 @@
+/* Importar fuente Google Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', 'Arial', sans-serif; /* Añadir Roboto con Arial como respaldo */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #f4f4f4;
     color: #333;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #0e0e0f;
+    margin-bottom: 0;
+    font-weight: bold; /* Usa la fuente Roboto en negrita */
 }
 
 header {
-    background-color: #266aad;
+    width: 100%;
+    background-color:#2e49c0;
     color: white;
-    padding: 20px 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 700; /* Usa Roboto en negrita */
+}
+
+.highlight {
+    color: #dbeff3;
     text-align: center;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+/* Navbar Styles */
+nav ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #000; /* Cambiado a color negro */
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 0.5rem 1rem;
-    background-color: #3676b6;
+    padding: 10px 20px;
+    background-color: transparent; /* Fondo transparente */
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Main Content */
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+    background-color: #333; /* Color más oscuro al hacer hover */
+    color: white;
+}
+
 main {
+    display: flex;
+    justify-content: space-between;
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
     background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
 }
 
-/* About Me Section */
-.about-me h2 {
-    background-color: #367bc0;
-    color: white;
-    padding: 0.5rem;
-    text-align:justify;
+.about {
+    display: flex;
+    flex-direction: column;
 }
 
-.about-me .profile-pic {
-    float: right;
-    border-radius: 8px;
-    margin-left: 2rem;
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-text {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Añade un espacio entre los elementos de texto */
+}
+
+.about img.profile-pic {
     width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px;
 }
 
-.about-me .flag-pic {
-    width: 150px;
-    display: block;
-    margin: 1rem auto;
+img.flag {
+    width: 100px;
+    height: auto;
+    align-self: flex-start; /* Alinea la imagen de la bandera al inicio */
+    margin-top: 20px;
 }
 
-/* Resources Section */
-.resources h2 {
-    background-color: #2c6eaf;
-    color: white;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.resources ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.resources ul li {
-    margin: 0.5rem 0;
-}
-
-.resources ul li a {
-    text-decoration: none;
-    color: #3498db;
-}
-
-
-
-/* Footer */
 footer {
-    background-color: #34495e;
+    background-color: #23395d;
     color: white;
+    padding: 10px;
+    width: 100%;
     text-align: center;
-    padding: 1rem;
+    margin-top: 20px;
 }
 
 footer p {
-    margin: 0.5rem 0;
+    margin: 5px 0;
 }
