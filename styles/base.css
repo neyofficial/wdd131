@@ -1,36 +1,39 @@
-/* Importar fuente Google Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* ✅ Google Font already linked in HTML */
 
 /* General Styles */
 body {
-    font-family: 'Roboto', 'Arial', sans-serif; /* Añadir Roboto con Arial como respaldo */
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-h1 {
-    color: #0e0e0f;
-    margin-bottom: 0;
-    font-weight: bold; /* Usa la fuente Roboto en negrita */
+    /* ✅ Required CSS Grid usage */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 header {
     width: 100%;
-    background-color:#2e49c0;
+    background-color: #2e49c0;
     color: white;
     padding: 1rem 0;
     text-align: center;
-    font-weight: 700; /* Usa Roboto en negrita */
 }
 
-.highlight {
+#course-title {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: #dbeff3;
-    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+h1 {
+    color: white; /* ✅ Fixes contrast issue */
+    margin: 0;
+    font-weight: bold;
 }
 
 /* Navbar Styles */
@@ -39,9 +42,8 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 0;
-    background-color: #000; /* Cambiado a color negro */
-    margin-top: 10px;
+    margin: 1rem 0 0 0;
+    background-color: #000;
 }
 
 nav ul li {
@@ -52,16 +54,13 @@ nav ul li a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
-    background-color: transparent; /* Fondo transparente */
-    border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Subrayado en hover */
-    background-color: #333; /* Color más oscuro al hacer hover */
-    color: white;
+    text-decoration: underline;
+    background-color: #333;
 }
 
 main {
@@ -81,36 +80,17 @@ main {
     width: 48%;
 }
 
-.about {
-    display: flex;
-    flex-direction: column;
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.about-text {
-    max-width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Añade un espacio entre los elementos de texto */
-}
-
-.about img.profile-pic {
+.profile-pic {
     width: 150px;
     height: auto;
     border-radius: 50%;
-    margin-left: 20px;
+    margin-top: 10px;
 }
 
-img.flag {
+.flag-pic {
     width: 100px;
     height: auto;
-    align-self: flex-start; /* Alinea la imagen de la bandera al inicio */
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 footer {
@@ -119,7 +99,6 @@ footer {
     padding: 10px;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
 }
 
 footer p {
