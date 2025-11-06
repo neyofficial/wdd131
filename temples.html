@@ -5,113 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album</title>
+
+    <!-- Required CSS Files -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 600px)">
-    <script src="scripts/temples.js" defer></script>
-  
 
+    <!-- Script -->
+    <script src="scripts/temples.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Temple Album</h1>
         <nav>
             <ul class="navigation">
-                <li><a href="">Home</a></li>
-                <li><a href="">Old</a></li>
-                <li><a href="">New</a></li>
-                <li><a href="">Large</a></li>
-                <li><a href="">Small</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <h2>Current Menu Selection: Home</h2>
-        <div class="temple-gallery">
+
+        <div class="temples-grid">
+
             <figure>
-                <img src="images/accra-ghana-temple.jpeg" 
-                     srcset="images/accra-ghana-temple.jpeg 600w,
-                             images/accra-ghana-temple.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 1">
+                <img src="images/accra-ghana-temple.jpeg" alt="Accra Ghana Temple">
                 <figcaption>Accra Ghana</figcaption>
             </figure>
+
             <figure>
-                <img src="images/albuquerque-temple-lds.jpeg" 
-                     srcset="images/albuquerque-temple-lds.jpeg 600w,
-                             images/albuquerque-temple-lds.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 3">
+                <img src="images/albuquerque-temple-lds.jpeg" alt="Albuquerque Temple">
                 <figcaption>Albuquerque</figcaption>
             </figure>
+
             <figure>
-                <img src="images/anchorage-temple-lds.jpeg" 
-                     srcset="images/anchorage-temple-lds.jpeg 600w,
-                             images/anchorage-temple-lds.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 4">
+                <img src="images/anchorage-temple-lds.jpeg" alt="Anchorage Temple">
                 <figcaption>Anchorage</figcaption>
             </figure>
+
             <figure>
-                <img src="images/apia-samoa-temple-lds.jpeg" 
-                     srcset="images/apia-samoa-temple-lds.jpeg 600w,
-                             images/apia-samoa-temple-lds.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 5">
+                <img src="images/apia-samoa-temple-lds.jpeg" alt="Apia Samoa Temple">
                 <figcaption>Apia Samoa</figcaption>
             </figure>
+
             <figure>
-                <img src="images/calgary-alberta-temple-lds.jpeg" 
-                     srcset="images/calgary-alberta-temple-lds.jpeg 600w,
-                             images/calgary-alberta-temple-lds.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 6">
+                <img src="images/calgary-alberta-temple-lds.jpeg" alt="Calgary Alberta Temple">
                 <figcaption>Calgary Alberta</figcaption>
             </figure>
+
             <figure>
-                <img src="images/aba-nigeria-temple.jpeg" 
-                     srcset="images/aba-nigeria-temple.jpeg 600w,
-                             images/aba-nigeria-temple.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 7">
+                <img src="images/aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple">
                 <figcaption>Aba Nigeria</figcaption>
             </figure>
+
             <figure>
-                <img src="images/ciudad-juarez-mexico-temple-lds.jpeg" 
-                     srcset="images/ciudad-juarez-mexico-temple-lds.jpeg 600w,
-                             images/ciudad-juarez-mexico-temple-lds.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 8">
+                <img src="images/ciudad-juarez-mexico-temple-lds.jpeg" alt="Ciudad Juarez Mexico Temple">
                 <figcaption>Ciudad Juarez Mexico</figcaption>
             </figure>
+
             <figure>
-                <img src="images/independence-indiana-temple.jpeg" 
-                     srcset="images/independence-indiana-temple.jpeg 600w,
-                             images/independence-indiana-temple.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 9">
+                <img src="images/independence-indiana-temple.jpeg" alt="Independence Indiana Temple">
                 <figcaption>Independence Indiana</figcaption>
             </figure>
+
             <figure>
-                <img src="images/kyiv-ukraine-temple-lds.jpeg" 
-                     srcset="images/kyiv-ukraine-temple-lds.jpeg 600w,
-                             images/kyiv-ukraine-temple-lds.jpeg 1200w" 
-                     sizes="(max-width: 600px) 100vw, 
-                            (min-width: 601px) 50vw" 
-                     alt="Temple 10">
+                <img src="images/kyiv-ukraine-temple-lds.jpeg" alt="Kyiv Ukraine Temple">
                 <figcaption>Kyiv Ukraine</figcaption>
             </figure>
+
         </div>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah. Last modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah. Last modified:
+            <span id="lastModified"></span>
+        </p>
     </footer>
+
 </body>
+
 </html>
