@@ -8,7 +8,7 @@ const navList = document.querySelector("nav ul");
 
 // Create the hamburger button
 const hamburger = document.createElement("button");
-hamburger.textContent = "☰"; 
+hamburger.textContent = "☰";
 hamburger.classList.add("hamburger");
 
 // Insert hamburger before the ul
@@ -16,5 +16,5 @@ nav.prepend(hamburger);
 
 // Toggle the navigation menu on click
 hamburger.addEventListener("click", () => {
-    navList.classList.toggle("active");
+  navList.classList.toggle("active");
 });

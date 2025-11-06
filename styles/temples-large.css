@@ -1,20 +1,29 @@
-/* ✅ Required media query */
+/* ============================= */
+/* Large Screen Layouts - temples-large.css */
+/* ============================= */
+
 @media (min-width: 600px) {
-    .temples-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+  .hamburger {
+    display: none; /* Hide hamburger on larger screens */
+  }
 
-/* Extra layouts for additional breakpoints (optional but helpful) */
+  .navigation {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+  }
 
-@media (max-width: 599px) {
-    .temples-grid {
-        grid-template-columns: 1fr;
-    }
+  .temples-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 900px) {
-    .temples-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .temples-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

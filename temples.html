@@ -2,90 +2,101 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album | WDD 131 - Dynamic Web Fundamentals - Nana Esi Yamoah</title>
 
-    <!-- Required CSS Files -->
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 600px)">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Script -->
-    <script src="scripts/temples.js" defer></script>
+  <!-- ✅ Required CSS Files -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 600px)">
+
+  <!-- ✅ Required Script File -->
+  <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Temple Album</h1>
-        <nav>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Temple Album</h1>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Current Menu Selection: Home</h2>
+  <main>
+    <!-- ✅ Required single <h1> inside main -->
+    <h1>Nana Esi Yamoah</h1>
 
-        <div class="temples-grid">
+    <h2>Current Menu Selection: Home</h2>
 
-            <figure>
-                <img src="images/accra-ghana-temple.jpeg" alt="Accra Ghana Temple">
-                <figcaption>Accra Ghana</figcaption>
-            </figure>
+    <div class="temples-grid">
 
-            <figure>
-                <img src="images/albuquerque-temple-lds.jpeg" alt="Albuquerque Temple">
-                <figcaption>Albuquerque</figcaption>
-            </figure>
+      <figure>
+        <img src="images/accra-ghana-temple.jpeg" alt="Accra Ghana Temple">
+        <figcaption>Accra Ghana</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/anchorage-temple-lds.jpeg" alt="Anchorage Temple">
-                <figcaption>Anchorage</figcaption>
-            </figure>
+      <figure>
+        <img src="images/albuquerque-temple-lds.jpeg" alt="Albuquerque Temple">
+        <figcaption>Albuquerque</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/apia-samoa-temple-lds.jpeg" alt="Apia Samoa Temple">
-                <figcaption>Apia Samoa</figcaption>
-            </figure>
+      <figure>
+        <img src="images/anchorage-temple-lds.jpeg" alt="Anchorage Temple">
+        <figcaption>Anchorage</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/calgary-alberta-temple-lds.jpeg" alt="Calgary Alberta Temple">
-                <figcaption>Calgary Alberta</figcaption>
-            </figure>
+      <figure>
+        <img src="images/apia-samoa-temple-lds.jpeg" alt="Apia Samoa Temple">
+        <figcaption>Apia Samoa</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple">
-                <figcaption>Aba Nigeria</figcaption>
-            </figure>
+      <figure>
+        <img src="images/calgary-alberta-temple-lds.jpeg" alt="Calgary Alberta Temple">
+        <figcaption>Calgary Alberta</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/ciudad-juarez-mexico-temple-lds.jpeg" alt="Ciudad Juarez Mexico Temple">
-                <figcaption>Ciudad Juarez Mexico</figcaption>
-            </figure>
+      <figure>
+        <img src="images/aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple">
+        <figcaption>Aba Nigeria</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/independence-indiana-temple.jpeg" alt="Independence Indiana Temple">
-                <figcaption>Independence Indiana</figcaption>
-            </figure>
+      <figure>
+        <img src="images/ciudad-juarez-mexico-temple-lds.jpeg" alt="Ciudad Juarez Mexico Temple">
+        <figcaption>Ciudad Juarez Mexico</figcaption>
+      </figure>
 
-            <figure>
-                <img src="images/kyiv-ukraine-temple-lds.jpeg" alt="Kyiv Ukraine Temple">
-                <figcaption>Kyiv Ukraine</figcaption>
-            </figure>
+      <figure>
+        <img src="images/independence-indiana-temple.jpeg" alt="Independence Indiana Temple">
+        <figcaption>Independence Indiana</figcaption>
+      </figure>
 
-        </div>
-    </main>
+      <figure>
+        <img src="images/phoenix-arizona-temple.jpeg" alt="Phoenix Arizona Temple">
+        <figcaption>Phoenix Arizona</figcaption>
+      </figure>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah. Last modified:
-            <span id="lastModified"></span>
-        </p>
-    </footer>
+      <figure>
+        <img src="images/kyiv-ukraine-temple-lds.jpeg" alt="Kyiv Ukraine Temple">
+        <figcaption>Kyiv Ukraine</figcaption>
+      </figure>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah. Last modified:
+      <span id="lastModified"></span>
+    </p>
+  </footer>
 
 </body>
 
