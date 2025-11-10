@@ -1,95 +1,164 @@
-/* ============================= */
-/* Base Styles - temples.css */
-/* ============================= */
-
 body {
-  font-family: 'Montserrat', 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: "Vollkorn", serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+    }
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
+    background-color: #284b63;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    }
 
-/* ✅ HAMBURGER MENU STYLES */
-.hamburger {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: block;
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+    /* font-weight: bold; */
+	color: #ffffff;
 }
 
 .navigation {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: #333;
-  padding: 1rem;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 200px;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    max-width: 760px;
+    list-style: none;
+    color:#d9d9d9;
 }
 
-.navigation.active {
-  display: flex;
+.navigation ul {
+	display: flex;
+    list-style-type: none;
+    flex-direction: column;
+
 }
 
-.navigation li a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem;
+.navigation a {
+    display: none;
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.navigation li a:hover {
-  background-color: #555;
-  border-radius: 5px;
+.navigation a:hover {
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+    color: #d9d9d9;
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.open a {
+    display: block;
+}
+
+
+
+/* @media screen and (max-width: 760px) {
+    
+    .temple-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
+
+/* @media (mix-width: 640px) {
+          
+    
+    .temples {
+        grid-template-columns: 1fr;
+    }
+
+} */
+
+/* header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff;
 }
 
 main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+} */
+
+h2 {
+    display: block;
+    font-size: 3rem;
+    color: #353535;
+    margin-block-start: 1em;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
 }
 
-.temples-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+section {
+    display: block;
+    margin: 1rem auto; 
+    max-width: 940px;
+    unicode-bidi: isolate;
+    padding: 1rem;
+    background-color: #fff;
 }
 
-.temples-grid img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
+figure {
+    text-align: center;
 }
 
-.temples-grid img:hover {
-  transform: scale(1.05);
+img { 
+    display: block;
+    width: 100%; 
+    height: auto; 
+}
+
+figcaption {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #284b63;
 }
 
 footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #333;
-  color: white;
+    text-align: center;
+    font-weight: 400;
+	background-color: #353535;
+    font-size: 1.2rem;
+    display: block;
+    unicode-bidi: isolate;
 }
 
-/* ✅ Minimal media query to satisfy validator */
-@media (min-width: 600px) {
-  body {
-    background-color: #f9f9f9;
-  }
+footer p {
+	color: #d9d9d9;
+	line-height: 1.8em;
 }
