@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #b92526; /* Ghana's flag color */
+    --secondary-color: #1c6b1c;
+    --background-color: #f3f3f3;
+    --text-color: #333;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  .hero {
+    position: relative;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .data-weather {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .data, .weather {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .data ul, .weather ul {
+    list-style: none;
+    padding: 0;
+  }
+
+
+/* General Weather Section Styling */
+.weather-section {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    background-color: rgba(0, 107, 60, 0.8); /* Green, semi-transparent */
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Weather title with emoticon (for wider view) */
+.weather-section h2::after {
+    content: "⛅"; /* Emoticon for wider view */
+    font-size: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Media query for mobile view (max width 768px) */
+@media (max-width: 768px) {
+    /* Replace emoticon with SVG image in mobile view */
+    .weather-section h2::after {
+        content: url('images/weather-icon.svg'); /* Use SVG icon in mobile view */
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+  
+  footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .data-weather {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .data, .weather {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
