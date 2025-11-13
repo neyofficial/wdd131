@@ -18,6 +18,7 @@
         display: flex !important;
         flex-direction: row;
         justify-content: center;
+        align-items: center; /* ✅ ensure flex alignment */
         gap: 1rem;
         margin-top: 1rem;
     }
