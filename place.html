@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 131 - Place webpage.">
+  <meta name="author" content="Nana Esi Yamoah">
+  <title>My WDD 131 Webpage</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts/place.js" defer></script>
+
+</head>
+<body>
+  <header class="hero">
+    <picture>
+      <source srcset="images/ghana-large.webp" media="(min-width: 768px)">
+      <source srcset="images/ghana-small.webp" media="(max-width: 767px)">
+      <img src="images/ghana-small.webp" alt="Independence Square in Ghana" class="hero-img">
+    </picture>
+    <h1>Ghana</h1>
+  </header>
+  <main>
+  <!-- Data Section -->
+  <section class="data-weather">
+    <div class="data">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 238,533 sq km</li>
+        <li><strong>Population:</strong> 33,107,275</li>
+        <li><strong>Capital:</strong> Accra</li>
+        <li><strong>Languages:</strong> English, Akan</li>
+        <li><strong>Currency:</strong> Ghanaian Cedis (GHS)</li>
+        <li><strong>Time Zone:</strong> UTC+0 (GMT)</li>
+        <li><strong>Calling Code:</strong> +233</li>
+        <li><strong>Internet TLD:</strong> .gh</li>
+      </ul>
+    </div>
+
+    <!-- Weather Section -->
+    <div class="weather"> <img src="images/weather-icon.svg" alt="Weather icon">
+      <h2>Weather ⛅ <span class="images/weather-icon.svg"></span></h2>
+      <ul>
+        <li><strong>Temperature:</strong> 10°C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> 5 km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Nana Esi Yamoah | Ghana</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
