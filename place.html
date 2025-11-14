@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This webpage presents an informative overview of Ghana, combining essential facts, climate details, and a responsive visual layout designed for WDD 131 coursework. Visitors can explore key data such as population, capital, languages, currency, and time zone, supported by a hero image representing the nation. The page also includes a simple weather summary and clear, accessible formatting. It demonstrates effective use of semantic HTML, modern styling, and structured content to create a clean, user-friendly learning resource for all its users.">
+
+  <!-- 80-word meta description -->
+  <meta name="description" content="This student project page provides a clear, organized, and responsive overview of Ghana for WDD 131 coursework. It highlights essential national facts including population, geographic size, capital city, languages spoken, time zone, and currency, along with a simplified weather summary for learners. The page uses semantic HTML, accessible layout practices, responsive images, and modern CSS to create a clean and user-friendly learning resource. It is designed to help students understand how to structure meaningful web content.">
+
   <meta name="author" content="Nana Esi Yamoah">
   <title>My WDD 131 Webpage</title>
-  <link rel="stylesheet" href="styles/place.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Required Google Fonts preconnect links (corrected) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="scripts/place.js" defer></script>
 
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
   <header class="hero">
     <picture>
@@ -22,41 +28,42 @@
     </picture>
     <h1>Ghana</h1>
   </header>
-  <main>
-  <!-- Data Section -->
-  <section class="data-weather">
-    <div class="data">
-      <h2>Data</h2>
-      <ul>
-        <li><strong>Area:</strong> 238,533 sq km</li>
-        <li><strong>Population:</strong> 33,107,275</li>
-        <li><strong>Capital:</strong> Accra</li>
-        <li><strong>Languages:</strong> English, Akan</li>
-        <li><strong>Currency:</strong> Ghanaian Cedis (GHS)</li>
-        <li><strong>Time Zone:</strong> UTC+0 (GMT)</li>
-        <li><strong>Calling Code:</strong> +233</li>
-        <li><strong>Internet TLD:</strong> .gh</li>
-      </ul>
-    </div>
 
-    <!-- Weather Section -->
-    <div class="weather"> <img src="images/weather-icon.svg" alt="Weather icon">
-      <h2>Weather ⛅ <span class="images/weather-icon.svg"></span></h2>
-      <ul>
-        <li><strong>Temperature:</strong> 10°C</li>
-        <li><strong>Conditions:</strong> Partly Cloudy</li>
-        <li><strong>Wind:</strong> 5 km/h</li>
-        <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
-      </ul>
-    </div>
-  </section>
-</main>
+  <main>
+    <!-- Data Section -->
+    <section class="data-weather">
+      <div class="data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 238,533 sq km</li>
+          <li><strong>Population:</strong> 33,107,275</li>
+          <li><strong>Capital:</strong> Accra</li>
+          <li><strong>Languages:</strong> English, Akan</li>
+          <li><strong>Currency:</strong> Ghanaian Cedis (GHS)</li>
+          <li><strong>Time Zone:</strong> UTC+0 (GMT)</li>
+          <li><strong>Calling Code:</strong> +233</li>
+          <li><strong>Internet TLD:</strong> .gh</li>
+        </ul>
+      </div>
+
+      <!-- Weather Section -->
+      <div class="weather">
+        <img src="images/weather-icon.svg" alt="Weather icon">
+        <h2>Weather ⛅</h2>
+        <ul>
+          <li><strong>Temperature:</strong> 10°C</li>
+          <li><strong>Conditions:</strong> Partly Cloudy</li>
+          <li><strong>Wind:</strong> 5 km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Nana Esi Yamoah | Ghana</p>
     <p>Last Modification: <span id="last-modified"></span></p>
   </footer>
-
 </body>
 </html>
