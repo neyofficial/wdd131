@@ -1,4 +1,7 @@
-/* General Styles */
+/* ===============================
+   BASE / MOBILE STYLES
+   =============================== */
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -19,15 +22,18 @@ header {
   position: relative;
 }
 
-h1 {
+.titlemain {
+  text-align: left;
   margin: 0;
+  position: relative;
+  left: 20px;
 }
 
 nav {
   margin-top: 10px;
 }
 
-/* MOBILE — Base styles */
+/* Hamburger — mobile only default */
 .hamburger {
   display: block;
   background-color: transparent;
@@ -40,6 +46,7 @@ nav {
   cursor: pointer;
 }
 
+/* Mobile dropdown menu */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -48,20 +55,32 @@ nav {
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top: 60px;
+  top: 30px;
   right: 40px;
   background-color: #2e49c0;
 }
 
+/* Toggle show class */
 .nav-links.show {
   display: flex;
 }
 
+/* Navigation links */
 .nav-links li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: color 0.3s ease;
+}
+
+/* Required hover — text */
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+/* Required hover — background */
+.nav-links li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 main {
@@ -71,6 +90,7 @@ main {
   text-align: center;
 }
 
+/* GALLERY (mobile default = 1 column) */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -99,27 +119,32 @@ footer {
   text-align: center;
 }
 
-.titlemain {
-  text-align: left;
-  position: relative;
-  left: 20px;
+footer p {
+  margin: 5px 0;
 }
 
-/* DESKTOP MEDIA QUERY — REQUIRED FOR GRADING */
+/* ===============================
+   DESKTOP STYLES (MEDIA QUERY)
+   =============================== */
+
 @media (min-width: 768px) {
+  
+  /* Hide hamburger on desktop */
   .hamburger {
     display: none;
   }
 
+  /* Desktop horizontal nav */
   .nav-links {
     display: flex;
     position: static;
     flex-direction: row;
     gap: 30px;
-    background-color: transparent;
     justify-content: center;
+    background-color: transparent;
   }
 
+  /* 3-column gallery */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
