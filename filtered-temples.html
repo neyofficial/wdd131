@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Nana Esi Yamoah" content="Temple Album">
-    <title>Temple Album</title>
+
     <meta name="description" content="Explore detailed temple cards featuring location, history, and key information about selected temples presented in an interactive layout.">
 
     <meta name="author" content="Nana Esi Yamoah">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Required preconnect links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Temple Album</title>
+
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
     <script src="scripts/filtered-temples.js" defer></script>
@@ -31,17 +37,14 @@
     </header>
 
     <main>
-        <h2>Temple Search</h2> 
-        
+        <h2>Temple Search</h2>
         <input type="text" id="search" placeholder="Search temples..." />
-    
-        <div class="gallery">
-        </div>
+
+        <div class="gallery"></div>
     </main>
-    
-    
+
     <footer>
-        <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah, Accra- Ghana</p>
+        <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah, Accra - Ghana</p>
         <p id="lastModified"></p>
     </footer>
 </body>

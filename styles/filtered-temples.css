@@ -27,6 +27,7 @@ nav {
   margin-top: 10px;
 }
 
+/* MOBILE — Base styles (no duplicates) */
 .hamburger {
   display: block;
   background-color: transparent;
@@ -75,6 +76,7 @@ main {
   text-align: center;
 }
 
+/* GALLERY — base (mobile default) */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -107,26 +109,32 @@ footer p {
   margin: 5px 0;
 }
 
-/* Media queries for zooming behavior */
+/* DESKTOP MEDIA QUERY — only changes differing from mobile */
 @media (min-width: 768px) {
+
+  /* Hamburger disappears on desktop */
   .hamburger {
       display: none;
   }
 
+  /* Full horizontal nav on desktop */
   .nav-links {
       display: flex;
+      position: static;
       flex-direction: row;
+      gap: 30px;
       justify-content: center;
+      background-color: transparent;
   }
 
+  /* 3-column gallery on larger screens */
   .gallery {
       grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/**/
-.titlemain{
+.titlemain {
   text-align: left;
   position: relative;
   left: 20px;
-  }
+}
