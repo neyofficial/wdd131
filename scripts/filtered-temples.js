@@ -83,30 +83,30 @@ const temples = [
   },
 
   /* 3 NEW REQUIRED ENTRIES */
-  {
-    templeName: "Accra Ghana",
-    location: "Accra, Ghana",
-    dedicated: "2004, January, 11",
-    area: 17500,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-lds-1029723-wallpaper.jpg"
-  },
-  {
-    templeName: "Paris France",
-    location: "Paris, France",
-    dedicated: "2017, May, 21",
-    area: 44175,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-lds-1964479-wallpaper.jpg"
-  },
-  {
-    templeName: "Rome Italy",
-    location: "Rome, Italy",
-    dedicated: "2019, March, 10",
-    area: 40000,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-2260120-wallpaper.jpg"
-  }
+   {
+        templeName: "Arequipa Perú",
+        location: "Arequipa, Perú",
+        dedicated: "2019, December, 15",
+        area: 26969,
+        imageUrl:
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/400x250/4-48661c257177c19a0f39a3991b1a7e7aa0338487.jpeg"
+    },
+    {
+        templeName: "Albuquerque New Mexico",
+        location: "Albuquerque, New Mexico, United States",
+        dedicated: "2000, March, 5",
+        area: 34245,
+        imageUrl:
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-137883-wallpaper.jpg"
+    },
+    {
+        templeName: "Trujillo Perú",
+        location: "Trujillo, Perú",
+        dedicated: "2015, June, 21",
+        area: 28200,
+        imageUrl:
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/trujillo-peru/400x250/trujillo-peru-temple-exterior-1449769-wallpaper.jpg"
+    }
 ];
 
 function createTempleCard(templesArray) {
