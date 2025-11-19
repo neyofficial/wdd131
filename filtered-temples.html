@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Explore detailed temple cards featuring location, history, and key information about selected temples presented in an interactive layout.">
+    <!-- 50–160 character description — SEO OK -->
+    <meta name="description" content="View and filter temple cards with images, dedication dates, locations, and detailed temple information in an interactive gallery.">
 
     <meta name="author" content="Nana Esi Yamoah">
 
-    <!-- Required preconnect links -->
+    <!-- Performance: Preconnect Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Temple Album</title>
 
+    <!-- Correct linking: mobile/base + desktop overrides -->
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/filtered-temples.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+    
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
     <header>
         <h1 class="titlemain">Temple Album</h1>
         <nav>
-            <button class="hamburger">&#9776;</button>
+            <button class="hamburger" aria-label="Menu Toggle">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="https://neyofficial.github.io/wdd131/">Home</a></li>
                 <li><a href="#" class="filter-btn" data-filter="old">Old</a></li>
@@ -38,13 +40,13 @@
 
     <main>
         <h2>Temple Search</h2>
-        <input type="text" id="search" placeholder="Search temples..." />
+        <input type="text" id="search" placeholder="Search temples..." aria-label="Search temples">
 
         <div class="gallery"></div>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Nana Esi Yamoah, Accra - Ghana</p>
+        <p>&copy; <span id="currentyear"></span> Nana Esi Yamoah, Accra - Ghana</p>
         <p id="lastModified"></p>
     </footer>
 </body>

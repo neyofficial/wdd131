@@ -2,21 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const lastModified = document.getElementById("lastModified");
-    const currentYear = document.getElementById("currentyear");
+    const currentYear = document.getElementById("currentYear");
 
-    // Toggle nav menu on hamburger click
+    // Toggle nav menu
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('show');
         hamburger.textContent = navLinks.classList.contains('show') ? '✖' : '☰';
     });
 
-    // Update footer with last modified date
+    // Footer values
     lastModified.textContent = `Last Modified: ${document.lastModified}`;
-
-    // Update footer with current year
     currentYear.textContent = new Date().getFullYear();
 
-    // Handle zoom responsivity (resize event listener)
+    // Reset hamburger on desktop
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 768) {
             navLinks.classList.remove('show');
@@ -25,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// REQUIRED 10 TEMPLE ARRAY (7 original + 3 added)
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -82,12 +81,37 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  
+
+  /* 3 NEW REQUIRED ENTRIES */
+  {
+    templeName: "Accra Ghana",
+    location: "Accra, Ghana",
+    dedicated: "2004, January, 11",
+    area: 17500,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-lds-1029723-wallpaper.jpg"
+  },
+  {
+    templeName: "Paris France",
+    location: "Paris, France",
+    dedicated: "2017, May, 21",
+    area: 44175,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-lds-1964479-wallpaper.jpg"
+  },
+  {
+    templeName: "Rome Italy",
+    location: "Rome, Italy",
+    dedicated: "2019, March, 10",
+    area: 40000,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-2260120-wallpaper.jpg"
+  }
 ];
 
 function createTempleCard(templesArray) {
   const gallery = document.querySelector(".gallery");
-  gallery.innerHTML = ""; 
+  gallery.innerHTML = "";
 
   templesArray.forEach(temple => {
     let card = document.createElement("section");
@@ -98,55 +122,43 @@ function createTempleCard(templesArray) {
     let img = document.createElement("img");
 
     name.textContent = temple.templeName;
-    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-    dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
-    img.setAttribute("loading", "lazy");
+    location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+    dedication.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+    area.innerHTML = `<strong>Size:</strong> ${temple.area} sq ft`;
 
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
-    card.appendChild(img);
+    img.src = temple.imageUrl;
+    img.alt = `${temple.templeName} Temple`;
+    img.loading = "lazy";
 
+    card.append(name, location, dedication, area, img);
     gallery.appendChild(card);
   });
 }
 
 createTempleCard(temples);
 
-
-const searchInput = document.getElementById("search");
-searchInput.addEventListener("input", function () {
-  const searchTerm = searchInput.value.toLowerCase();
-  const filteredTemples = temples.filter(temple =>
-    temple.templeName.toLowerCase().includes(searchTerm) ||
-    temple.location.toLowerCase().includes(searchTerm)
+// Search filter
+document.getElementById("search").addEventListener("input", function () {
+  const term = this.value.toLowerCase();
+  const results = temples.filter(t =>
+    t.templeName.toLowerCase().includes(term) ||
+    t.location.toLowerCase().includes(term)
   );
-  createTempleCard(filteredTemples); 
+  createTempleCard(results);
 });
 
+// Button filters
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    let filter = btn.dataset.filter;
+    let filtered;
 
-const filterButtons = document.querySelectorAll(".filter-btn");
-filterButtons.forEach(button => {
-  button.addEventListener("click", function () {
-    const filter = button.getAttribute("data-filter");
-    let filteredTemples;
-    
-    if (filter === "old") {
-      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 2000);
-    } else if (filter === "new") {
-      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
-    } else if (filter === "large") {
-      filteredTemples = temples.filter(temple => temple.area > 50000);
-    } else if (filter === "small") {
-      filteredTemples = temples.filter(temple => temple.area <= 50000);
-    } else {
-      filteredTemples = temples;
-    }
+    if (filter === "old") filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+    else if (filter === "new") filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+    else if (filter === "large") filtered = temples.filter(t => t.area > 90000);
+    else if (filter === "small") filtered = temples.filter(t => t.area < 10000);
+    else filtered = temples;
 
-    createTempleCard(filteredTemples); 
+    createTempleCard(filtered);
   });
 });

@@ -1,11 +1,16 @@
-/* Styles for larger screens */
+/* Desktop overrides */
+
 .hamburger {
   display: none;
 }
 
 .nav-links {
   display: flex;
+  position: static;
+  flex-direction: row;
+  gap: 30px;
   justify-content: center;
+  background-color: transparent;
 }
 
 .gallery {
