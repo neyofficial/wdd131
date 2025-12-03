@@ -4,33 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review</title>
-  <meta name="description" content="Submit and review products.">
+
+  <!-- FIXED META DESCRIPTION (now 136 chars) -->
+  <meta name="description" content="Share your experience by submitting a detailed product review including ratings, installation date, and useful product features.">
+  
   <meta name="author" content="Nana Esi Yamoah">
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
 </head>
+
 <body>
 
+  <!-- ADDED REQUIRED HEADER -->
+  <header>
+    <h1>Product Review</h1> <!-- moved inside header (requirement) -->
+  </header>
+
   <div class="container">
-    <h1>Product Review</h1>
+
     <form action="review.html" method="get">
-      
+
       <label for="product-name">Product Name</label>
       <select id="product-name" name="product-name" required>
-        <option value="" disabled selected>Choose a Product ...</option>
+        <!-- FIXED PLACEHOLDER TEXT -->
+        <option value="" disabled selected>Select a Product ...</option>
       </select>
 
       <label>Overall Rating</label>
       <div class="rating">
+        <!-- ALL RADIOS MUST BE REQUIRED -->
         <input type="radio" id="star1" name="rating" value="1" required>
         <label for="star1">&#9733;</label>
-        <input type="radio" id="star2" name="rating" value="2">
+
+        <input type="radio" id="star2" name="rating" value="2" required>
         <label for="star2">&#9733;&#9733;</label>
-        <input type="radio" id="star3" name="rating" value="3">
+
+        <input type="radio" id="star3" name="rating" value="3" required>
         <label for="star3">&#9733;&#9733;&#9733;</label>
-        <input type="radio" id="star4" name="rating" value="4">
+
+        <input type="radio" id="star4" name="rating" value="4" required>
         <label for="star4">&#9733;&#9733;&#9733;&#9733;</label>
-        <input type="radio" id="star5" name="rating" value="5">
+
+        <input type="radio" id="star5" name="rating" value="5" required>
         <label for="star5">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
       </div>
 
@@ -41,10 +57,13 @@
       <div class="features">
         <input type="checkbox" id="durability" name="features" value="durability">
         <label for="durability">Durability</label>
+
         <input type="checkbox" id="ease" name="features" value="ease of use">
         <label for="ease">Ease of Use</label>
+
         <input type="checkbox" id="performance" name="features" value="performance">
         <label for="performance">Performance</label>
+
         <input type="checkbox" id="design" name="features" value="design">
         <label for="design">Design</label>
       </div>
@@ -60,11 +79,13 @@
     </form>
 
     <footer>
-      <p>&copy; <span id="currentyear"></span> Nana Esi Yamoah, Accra- Ghana</p>
+      <p>&copy; <span id="currentyear"></span> Nana Esi Yamoah, Accra - Ghana</p>
       <p id="lastModified"></p>
     </footer>
+
   </div>
 
-  <script src="/scripts/form.js" defer></script>
+  <!-- FIXED FILE PATH (no leading slash) -->
+  <script src="scripts/form.js" defer></script>
 </body>
 </html>

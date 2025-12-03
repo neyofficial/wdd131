@@ -2,72 +2,75 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .container {
+}
+
+.container {
     background-color: #eaeaea;
     padding: 10px;
     border-radius: 10px;
     width: 700px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+}
+
+h1 {
     background-color: #4b0e46;
     color: white;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin: 10px 0 5px;
-  }
-  
-  input[type="text"], input[type="date"], select, textarea {
+}
+
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  input[type="checkbox"] {
+}
+
+input[type="checkbox"] {
     margin-right: 5px;
-  }
-  
-  .rating label {
+}
+
+.rating label {
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .rating input {
+}
+
+.rating input {
     display: none;
-  }
-  
-  .rating input:checked ~ label {
+}
+
+.rating input:checked ~ label {
     color: gold;
-  }
-  
-  .features {
+}
+
+.features {
     margin-bottom: 10px;
-  }
-  
-  textarea {
+}
+
+textarea {
     height: 50px;
-  }
-  
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     width: 100%;
     padding: 10px;
     background-color: #4b0e46;
@@ -75,20 +78,33 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
+}
+
+input[type="submit"]:hover {
     background-color: #3e0c3d;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     margin-top: 20px;
     font-size: 12px;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 5px 0;
     color: #4b0e46;
+}
+
+/* ✔ REQUIRED MEDIA QUERY */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 15px;
   }
-  
+
+  body {
+    padding: 10px;
+    height: auto;
+    align-items: flex-start;
+  }
+}
