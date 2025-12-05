@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghanaian Cultural Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+<meta name="description" content="Welcome to Ghanaian Heritage Culture. Explore our exciting cuisine and festivals sign up for our newsletter to stay updated.">
+    <meta name="author" content="Nana Esi Yamoah">
+</head>
+<body>
+    <header>
+        <img src="images/ghana-heritage.jpg" alt="Ghanaian Heritage Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="culture.html">Cultural</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Ghanaian Heritage Culture</h1>
+        <section class="company-info">
+            <h2>Contact Information</h2>
+            <p>Address: Lane 3 Street, Weija, Accra, Ghana</p>
+            <p>Phone: (+233) 546302363</p>
+            <p>Email: neyamoah@gmail.com</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9333979928238!2d-0.32985309999999995!3d5.576864899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfa2db79a1a7cd%3A0xa7cd01e5fbdd0b45!2sUpper%20Weija%20Station!5e0!3m2!1sen!2sde!4v1721735800272!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employee">
+                <figure>
+                    <img src="images/employee1.jpeg" alt="John Doe">
+                    <figcaption>
+                        <h3>John Doe</h3>
+                        <p>Position: Tour Guide</p>
+                        <p>John is one of our long serving employees who is always ready to assist our customers have a nice time.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="employee">
+                <figure>
+                    <img src="images/employee2.jpeg" alt="Kelvin Kitten">
+                    <figcaption>
+                        <h3>Kelvin Kitten</h3>
+                        <p>Position: Safety Officer</p>
+                        <p>Kelvin, would be with you throughout your experience to ensure your safety.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="employee">
+                <figure>
+                    <img src="images/employee3.jpeg" alt="Jaredine Brown">
+                    <figcaption>
+                        <h3>Jaredine Brown</h3>
+                        <p>Position: Tour guide</p>
+                        <p>Jaredine always welcomes you with a smile.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="/submit_contact_form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <label>
+                        <input type="radio" id="purpose-general" name="purpose" value="general" required> General Inquiry
+                    </label>
+                    <label>
+                        <input type="radio" id="purpose-reservation" name="purpose" value="reservation" required> Reservation Question
+                    </label>
+                    <label>
+                        <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion" required> Website Suggestion
+                    </label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes"> Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>    
+    </main>
+    <footer>
+        <p>©2024 Ghanaian Cultural Heritage. All rights reserved.</p>
+        <nav class="social-links">
+            <a href="https://facebook.com">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.jpeg" alt="Instagram">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
